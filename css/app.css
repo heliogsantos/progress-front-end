@@ -1,0 +1,363 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background: #272727;
+}
+
+.container {
+    width: 250px;
+    height: 600px;
+    position: fixed;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    background: white;
+    border: 6px solid #3d3d3d;
+    z-index: 1;
+    position: relative;
+}
+
+.viewfinder {
+    width: 141px;
+    height: 60px;
+    background: #86a4af;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border: 4px solid #3d3d3d;
+    position: relative;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewfinder::after, .viewfinder::before {
+    content: "";
+    display: block;
+    border-left: 10px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    position: relative;
+    margin: 5px 5px;
+}
+
+.viewfinder::after {
+    border-right: 10px solid white;
+    border-left: none;
+}
+
+.body {
+    background: white;
+    width: 140px;
+    height: 170px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    bottom: 340px;
+    border: 5px solid #3d3d3d;
+}
+
+.line-center {
+    height: 120px;
+    width: 7px;
+    border-radius: 100px;
+    background: #3d3d3d;
+}
+
+.line-bottom {
+    position: relative;
+    top: 10px;
+    width: 50px;
+    height: 7px;
+    background: #3d3d3d;
+    border-radius: 100px;
+}
+
+.legs {
+    width: 107.7%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    left: -5px;
+}
+
+.leg {
+    background: white;
+    border: 4.9px solid #3d3d3d;
+    height: 70px;
+    width: 84px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top: none;
+    position: relative;
+    top: 10px;
+}
+
+
+.leg-left::after, .leg-right::after {
+    content: "";
+    display: block;
+    border: 3px solid #3d3d3d;
+    width: 0px;
+    height: 60px;
+    position: relative;
+    top: -64px;
+    left: -6px;
+}
+
+.leg-right::after {
+    position: relative;
+    float: right;
+    left: 6px;
+}
+
+.arms {
+    width: 234px;
+    height: 40px;
+    position: absolute;
+    background: white;
+    bottom: 144px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border: 5px solid #3d3d3d;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-around;
+    z-index: 20;
+}
+
+.arm {
+    width: 54px;
+    height: 90px;
+    background: white;
+    border: 5.3px solid #3d3d3d;
+    border-top: none;
+    border-right: none;
+    position: relative;
+    left: -33.9px;
+    z-index: 0;
+    top: 30px;
+}
+
+.arm-right {
+    border-right: 5px solid #3d3d3d;
+    border-left: none;
+    left: 33.9px;
+    float: right;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 6px solid #3d3d3d;
+}
+
+.arm-left {
+    border-top-left-radius: 5.9px;
+    border-right: 5px solid #3d3d3d;
+    position: relative;
+    z-index: 20;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+.arm-left::after, .arm-right::after, .leg::after {
+    content: "";
+    display: block;
+    background: #3d3d3d;
+    width: 50px;
+    height: 15px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+.leg::after {
+    top: 30px;
+    width: 55px;
+    height: 30px;
+}
+
+.back {
+    width: 180px;
+    height: 60px;
+    position: absolute;
+    background: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border: 5px solid #3d3d3d;
+    border-bottom: none;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.smoke {
+    width: 80px;
+    height: 300px;
+    position: fixed;
+    z-index: 0;
+    left: 50%;
+    top: 77%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    width: 20px;
+    height: 180px;
+    margin: 0;
+}
+
+.line:nth-of-type(1) {
+    background: #db6f53;
+}
+.line:nth-of-type(2) {
+    background: #f1c15f;
+}
+.line:nth-of-type(3) {
+    background: #7fcda4;
+}
+.line:nth-of-type(4) {
+    background: #67a1b8;
+}
+.line:nth-of-type(5) {
+    background: #917fb9;
+}
+
+.bullets {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    z-index: 0;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.bullet {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: #db6f53;
+    top: 0px;
+    left: 30px;
+    position: relative;
+}
+.bullet:nth-of-type(2) {
+    background: #917fb9;
+    float: left;
+    width: 110px;
+    height: 110px;
+    position: relative;
+    top: -99px;
+    left: 40px;
+}
+.bullet:nth-of-type(3) {
+    background: #f1c15f;
+    float: left;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: 20px;
+    top: -70px;
+}
+.bullet:nth-of-type(4) {
+    background: #67a1b8;
+    float: right;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: -30px;
+    top: -50px;
+}
+.bullet:nth-of-type(5) {
+    background: #7fcda4;
+    float: left;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -30px;
+    position: relative;
+    left: -20px;
+    top: -130px;
+}
+
+.anime {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    margin-top: 0px;
+}
+
+.box {
+    width: 100%;
+    text-align: left;
+    font-size: 100px;
+    font-weight: bold;
+    padding: 100px 40px;
+}
+
+.box:nth-of-type(3) {
+    color: white;
+    background: #e1441f;
+}
+
+
+.box:nth-of-type(1) {
+    color: black;
+    background: #f0d91d; 
+    animation: animeLanguages 5s;
+    padding: 500px 40px;
+    font-size: 200px;
+}
+
+.box:nth-of-type(2) {
+    color: white;
+    background: #57a1e6;
+}
+
+
+@keyframes animeLanguages {
+    0% {
+        padding: 100px 40px;
+        font-size: 100px;
+    }
+    30% {
+        padding: 110px 40px;
+        font-size: 100px;
+    }
+    50% {
+        padding: 120px 40px;
+    }
+    70% {
+        padding: 230px 40px;
+    }
+    100% {
+        padding: 500px 40px;
+        font-size: 200px;
+    }
+}
